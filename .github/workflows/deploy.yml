@@ -6,9 +6,9 @@ jobs:
     steps:
       - uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PWD }}
+          host: ${{ secrets.SSH_HOST }} # 远程服务器 host
+          username: ${{ secrets.SSH_USER }} # 远程服务器用户名
+          password: ${{ secrets.SSH_PWD }} # 远程服务器密码
           script_stop: true
           script: |
             # ls -al
